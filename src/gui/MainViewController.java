@@ -12,43 +12,46 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert.AlertType;
+import javafx.scene.control.Button;
 import javafx.scene.control.MenuItem;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.VBox;
 
 public class MainViewController implements Initializable{
 	
-	@FXML
-	private MenuItem menuItemBuscaPorNome;
+	//@FXML
+	//private MenuItem menuItemBuscaPorNome;
 	
 	@FXML
-	private MenuItem menuItemBuscaAvancada;
+	private Button btSearch;
 	
 	@FXML
-	private MenuItem menuItemAdicionar;
+	private Button btAdd;
 	
 	@FXML
-	private MenuItem menuItemSobre;
+	private Button btAbout;
 	
 	@FXML
-	public void onMenuItemBuscaPorNomeAction() {
-		System.out.println("onMenuItemBuscaPorNomeAction");
-	}
+	private Button btTranslators;
 	
 	@FXML
-	public void onMenuItemBuscaAvancadaAction() {
-		System.out.println("onMenuItemBuscaAvancadaAction");
-	}
-	
-	@FXML
-	public void onMenuItemAdicionarAction() {
-		System.out.println("onMenuItemAdicionarAction");
-	}
-	
-	@FXML
-	public void onMenuItemSobreAction() {
+	public void onBtSearchAction() {
 		loadView("/gui/About.fxml");
+		System.out.println("Oi, Eu sou o Goku! Botão Busca Funciona");
 	}
+	
+	@FXML
+	public void onBtAddAction() {
+		loadView("/gui/TranslatorList.fxml");
+		System.out.println("Oi, Eu sou o Goku! Botão Adicionar Funciona");
+	}
+	
+	@FXML
+	public void onBtAboutAction() {
+		loadView("/gui/About.fxml");
+		System.out.println("Oi, Eu sou o Goku! Botão Sobre Funciona");
+	}
+	
 	
 	
 	@Override
