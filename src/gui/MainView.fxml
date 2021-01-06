@@ -13,7 +13,7 @@
               <items>
                 <Button fx:id="btSearch" mnemonicParsing="false" onAction="#onBtSearchAction" prefHeight="25.0" prefWidth="77.0" text="Busca" />
                   <Button fx:id="btAdd" mnemonicParsing="false" onAction="#onBtAddAction" prefHeight="25.0" prefWidth="89.0" text="Adicionar" translateX="10.0" />
-                  <Button fx:id="btTranslators" mnemonicParsing="false" onAction="#onBtAddAction" text="Tradutores" translateX="20.0" />
+                  <Button fx:id="btTranslators" mnemonicParsing="false" onAction="#onBtTradutorAction" text="Tradutores" translateX="20.0" />
                   <Button fx:id="btAbout" mnemonicParsing="false" onAction="#onBtAboutAction" text="Sobre" translateX="30.0" />
               </items>
             </ToolBar>
