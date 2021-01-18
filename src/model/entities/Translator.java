@@ -119,4 +119,7 @@ public class Translator implements Serializable{
 	public String toString() {
 		return "Translator [id=" + id + ", name=" + name + "]";
 	}
+	
+	
+	
 }

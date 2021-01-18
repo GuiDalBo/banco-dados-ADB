@@ -68,6 +68,11 @@ public class TranslatorDaoJDBC implements TranslatorDao {
 				Translator obj = new Translator();
 				obj.setId(rs.getInt("Id"));
 				obj.setName(rs.getString("Name"));
+				obj.setEmail(rs.getString("Email"));
+				obj.setPhone(rs.getString("Phone"));
+				obj.setCellphone(rs.getString("CellPhone"));
+				obj.setRg(rs.getString("Rg"));
+				obj.setCpf(rs.getString("Cpf"));
 				list.add(obj);
 			}
 			return list;
@@ -86,13 +91,19 @@ public class TranslatorDaoJDBC implements TranslatorDao {
 		PreparedStatement st = null;
 		try {
 			st = conn.prepareStatement(
-				"INSERT INTO translator " +
-				"(Name) " +
-				"VALUES " +
-				"(?)", 
+				"INSERT INTO translator "
+				+ "(Name, Email, Phone, Cellphone, Rg, Cpf) "
+				+ "VALUES "
+				+ "(?, ?, ?, ?, ?, ?)",
 				Statement.RETURN_GENERATED_KEYS);
-
+			
+			
 			st.setString(1, obj.getName());
+			st.setString(2, obj.getEmail());
+			st.setString(3, obj.getPhone());
+			st.setString(4, obj.getCellphone());
+			st.setString(5, obj.getRg());
+			st.setString(6, obj.getCpf());
 
 			int rowsAffected = st.executeUpdate();
 			
@@ -120,12 +131,17 @@ public class TranslatorDaoJDBC implements TranslatorDao {
 		PreparedStatement st = null;
 		try {
 			st = conn.prepareStatement(
-				"UPDATE translator " +
-				"SET Name = ? " +
-				"WHERE Id = ?");
+				"UPDATE translator " 
+				+ "SET Name = ?, Email = ?, Phone = ?, Cellphone = ?, RG = ?, Cpf = ? "
+				+ "WHERE Id = ?");
 
 			st.setString(1, obj.getName());
-			st.setInt(2, obj.getId());
+			st.setString(2, obj.getEmail());
+			st.setString(3, obj.getPhone());
+			st.setString(4, obj.getCellphone());
+			st.setString(5, obj.getRg());
+			st.setString(6, obj.getCpf());
+			st.setInt(7, obj.getId());
 
 			st.executeUpdate();
 		}

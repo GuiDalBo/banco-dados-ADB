@@ -15,7 +15,7 @@
             <Insets bottom="10.0" left="20.0" top="10.0" />
          </padding>
       </Label>
-      <Label prefHeight="128.0" prefWidth="760.0" text="Aplicação de Banco de Dados para ADB Traduções. Em caso de erro. Usa a Agenda do Google ela faz tudo isso Seu Afonso">
+      <Label prefHeight="128.0" prefWidth="760.0" text="Aplicação de Banco de Dados para ADB Traduções.">
          <padding>
             <Insets left="20.0" />
          </padding>

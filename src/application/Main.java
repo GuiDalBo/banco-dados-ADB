@@ -4,7 +4,6 @@ import java.io.IOException;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.ScrollPane;
 import javafx.stage.Stage;
@@ -24,7 +23,7 @@ public class Main extends Application {
 			
 			mainScene = new Scene(scrollPane);
 			primaryStage.setScene(mainScene);
-			primaryStage.setTitle("Banco ADB versão alpha 0.1");
+			primaryStage.setTitle("Banco ADB versão alpha 1.0");
 			primaryStage.show();
 		} catch (IOException e) {
 			e.printStackTrace();

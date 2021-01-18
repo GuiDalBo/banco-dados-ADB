@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="474.0" prefWidth="832.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.TranslatorListController">
+<VBox prefHeight="587.0" prefWidth="1082.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.TranslatorListController">
    <children>
       <Label prefHeight="27.0" prefWidth="114.0" text="Tradutores">
          <font>
@@ -20,19 +20,20 @@
          </padding>
       </Label>
       <ToolBar prefHeight="40.0" prefWidth="200.0">
-        <items>
-          <Button fx:id="btNew" mnemonicParsing="false" onAction="#onBtNewAction" text="Novo" />
-        </items>
-      </ToolBar>
-      <TableView fx:id="tableViewTranslator" prefHeight="292.0" prefWidth="715.0">
+         <items>
+            <Button fx:id="btNew" mnemonicParsing="false" onAction="#onBtNewAction" text="Adicionar" />
+         </items></ToolBar>
+      <TableView fx:id="tableViewTranslator" prefHeight="416.0" prefWidth="964.0">
         <columns>
             <TableColumn fx:id="tableColumnId" prefWidth="31.0" text="ID" />
           <TableColumn fx:id="tableColumnName" prefWidth="149.0" text="Nome" />
+            <TableColumn fx:id="tableColumnEmail" prefWidth="173.0" text="E-mail" />
           <TableColumn fx:id="tableColumnPhone" prefWidth="94.0" text="Telefone" />
             <TableColumn fx:id="tableColumnCellPhone" prefWidth="136.0" text="Celular" />
-            <TableColumn fx:id="tableColumnEmail" prefWidth="173.0" text="E-mail" />
             <TableColumn fx:id="tableColumnRG" prefWidth="104.0" text="RG" />
             <TableColumn fx:id="tableColumnCPF" prefWidth="144.0" text="CPF" />
+            <TableColumn fx:id="tableColumnEDIT" prefWidth="75.0" />
+            <TableColumn fx:id="tableColumnREMOVE" prefWidth="75.0" />
         </columns>
       </TableView>
    </children>

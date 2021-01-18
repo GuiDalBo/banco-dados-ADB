@@ -18,10 +18,7 @@ import javafx.scene.control.ScrollPane;
 import javafx.scene.layout.VBox;
 import model.services.TranslatorService;
 
-public class MainViewController implements Initializable{
-	
-	//@FXML
-	//private MenuItem menuItemBuscaPorNome;
+public class MainViewController implements Initializable {
 	
 	@FXML
 	private Button btSearch;
@@ -38,30 +35,20 @@ public class MainViewController implements Initializable{
 	@FXML
 	public void onBtSearchAction() {
 		loadView("/gui/About.fxml", x -> {});
-		System.out.println("Oi, Eu sou o Goku! Botão Busca Funciona");
 	}
-	
-	@FXML
-	public void onBtAddAction() {
-		System.out.println("Oi, Eu sou o Goku! Botão Adicionar Funciona");
-	}
-	
+		
 	@FXML
 	public void onBtTradutorAction() {
 		loadView("/gui/TranslatorList.fxml", (TranslatorListController controller) -> {
 			controller.setTranslatorService(new TranslatorService());
 			controller.updateTableView();
 		});
-		System.out.println("Oi eu não sou o Goku! Botão Tradutores Funciona");
 	}
 	
 	@FXML
 	public void onBtAboutAction() {
 		loadView("/gui/About.fxml", x -> {});
-		System.out.println("Oi, Eu sou o Goku! Botão Sobre Funciona");
 	}
-	
-	
 	
 	@Override
 	public void initialize(URL uri, ResourceBundle rb) {
@@ -88,4 +75,5 @@ public class MainViewController implements Initializable{
 			Alerts.showAlert("IO Exception", "Error loading view", e.getMessage(), AlertType.ERROR);
 		}
 	}
+	
 }
